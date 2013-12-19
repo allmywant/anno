@@ -656,7 +656,9 @@ require([
                     connect.connect(defaultCommentBox.shareBtnNode, "click", function()
                     {
                         defaultCommentBox._closeKeybord();
-                        openShareDialog();
+                        window.setTimeout(function(){
+                            openShareDialog();
+                        }, 300);
                     });
 
                     defaultCommentBox.onCommentBoxFocus = function(commentBox)
@@ -695,7 +697,7 @@ require([
 
                         window.setTimeout(function(){
                             openShareDialog();
-                        }, 500);
+                        }, 300);
 
                     };
 
